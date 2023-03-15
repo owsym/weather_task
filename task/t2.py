@@ -5,14 +5,14 @@ from utils.read_files import read_files
 
 file_values = read_files()
 
-Temperatures = {}
+temperatures = {}
 for file_value in file_values:
     if file_value and file_value[1]:
-        Temperatures[file_value[0]] = float(file_value[1])
+        temperatures[file_value[0]] = float(file_value[1])
 
 dates_with_difference_of_7 = set()
-for date1, temp1 in Temperatures.items():
-    for date2, temp2 in Temperatures.items():
+for date1, temp1 in temperatures.items():
+    for date2, temp2 in temperatures.items():
         if date1 < date2 and abs(temp1 - temp2) == 7:
             dates_with_difference_of_7.add((date1, date2))
 
