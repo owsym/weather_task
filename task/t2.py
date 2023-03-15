@@ -1,14 +1,14 @@
-import os
+from utils.read_files import read_files_t2
 
-from utils.read_files import read_files
-
-
-file_values = read_files()
+file_values = read_files_t2()
 
 temperatures = {}
 for file_value in file_values:
-    if file_value and file_value[1]:
-        temperatures[file_value[0]] = float(file_value[1])
+    if file_value and len(file_value) >= 4 and file_value[1] and file_value[3]:
+        min_temp = float(file_value[3])
+        max_temp = float(file_value[1])
+        avg_temp = (min_temp + max_temp) / 2
+        temperatures[file_value[0]] = avg_temp
 
 dates_with_difference_of_7 = set()
 for date1, temp1 in temperatures.items():

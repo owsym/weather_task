@@ -1,8 +1,8 @@
-import os
-from utils.read_files import read_files
+
+from utils.read_files import read_files_t1
 
 
-file_values = read_files()
+file_values = read_files_t1()
 
 temperatures = {}
 for file_value in file_values:
