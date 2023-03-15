@@ -8,3 +8,8 @@ weatherfiles/
 .DS_Store
 
 *.txt
+
+__pycache__/
+
+__pycache__/
+
