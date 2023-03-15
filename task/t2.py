@@ -1,6 +1,6 @@
 import os
 
-from Utils.read_files import read_files
+from utils.read_files import read_files
 
 
 file_values = read_files()

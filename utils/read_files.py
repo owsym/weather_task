@@ -23,5 +23,3 @@ def read_files():
     return file_values
 
 file = read_files()
-for f in file:
-    print(f)
